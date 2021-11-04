@@ -1,3 +1,4 @@
+# Main file of the project
 import discord
 import os
 from commands import *
