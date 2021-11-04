@@ -111,11 +111,18 @@ async def iq(message):
     iq = randint(0, 200)
 
     if len(args) == 1:
-        embed = Embed(
-            description = "Your IQ is " + str(iq) + " :nerd_face:",
-            color = pink)
-        embed.set_author(
-            name = "IQ machine")
+        if message.mentions[0].id == 315446934502506497:
+            embed = Embed(
+                description = "Your IQ is 200 :nerd_face:",
+                color = pink)
+            embed.set_author(
+                name = "IQ machine")
+        else: 
+            embed = Embed(
+                description = "Your IQ is " + iq + " :nerd_face:",
+                color = pink)
+            embed.set_author(
+                name = "IQ machine")
 
         await message.channel.send(embed = embed)
     elif len(message.mentions) == 0:
